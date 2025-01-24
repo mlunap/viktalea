@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:300,400,700);
-
+.sitename{
+  color: #003366 !important;
+}
 .menu-footer {
   float: inline-end;  
 }
