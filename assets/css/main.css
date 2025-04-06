@@ -1,10 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:300,400,700);
-.sitename{
-  color: #003366 !important;
+#header{
+  background: #070e27 !important;
+}
+.text-justify{
+  text-align: justify;
 }
 .menu-footer {
   float: inline-end;  
 }
+
 .menu-footer > li{
   display:inline-block !important;
     margin-right:10px;
@@ -21,7 +25,7 @@
   :root { 
     --background-color: #ffffff; /* Background color for the entire website, including individual sections */
     --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-    --heading-color: #384f4b; /* Color for headings, subheadings and title throughout the website */
+    --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
     --accent-color: #1bbca3; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
     --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
     --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
@@ -29,7 +33,7 @@
   
   /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
   :root {
-    --nav-color: #444444;  /* The default color of the main navmenu links */
+    --nav-color: #ffffff;  /* The default color of the main navmenu links */
     --nav-hover-color: #1bbca3; /* Applied to main navmenu links when they are hovered over or active */
     --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
     --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
@@ -82,7 +86,7 @@ body {
   h4,
   h5,
   h6 {
-    color: var(--heading-color);
+    color: var(--default-font);
     font-family: var(--heading-font);
   }
 /*--------------------------------------------------------------
@@ -160,11 +164,17 @@ body {
       transition: 0.3s;
     }
   
-    .navmenu li:hover>a,
     .navmenu .active,
     .navmenu .active:focus {
-      color: var(--contrast-color);
-      background-color: var(--nav-hover-color);
+      /*color: var(--contrast-color);*/
+      text-decoration: underline;
+      font-weight: bold;
+      /*background-color: var(--nav-hover-color);*/
+    }
+    .navmenu li:hover>a {
+      /*color: var(--contrast-color);*/
+      font-weight: bold;
+      /*background-color: var(--nav-hover-color);*/
     }
   
     .navmenu .dropdown ul {
@@ -737,7 +747,8 @@ body {
   
   .hero .btn-get-started {
     color: var(--contrast-color);
-    background: var(--accent-color);
+    border-color: var(--accent-color);
+    border: 1px solid;
     font-family: var(--heading-font);
     font-weight: 500;
     font-size: 15px;
@@ -751,7 +762,7 @@ body {
   }
   
   .hero .btn-get-started:hover {
-    background: color-mix(in srgb, var(--accent-color), transparent 20%);
+    background: color-mix(in srgb, var(--accent-color), transparent 70%);
   }
   
   .hero .carousel-control-prev,
@@ -948,7 +959,7 @@ body {
   }
   
   .services .service-item h4 a {
-    color: var(--heading-color);
+    color: var(--default-color);
     transition: ease-in-out 0.3s;
   }
   
